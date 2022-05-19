@@ -1,12 +1,15 @@
 
 
 def add(a, b):
-    return  # ...
+    return a+b
 
 
 def main():
-    a = input  # ...
-    b = input  # ...
+    a = int(input('Enter 1st Number?'))
+    b = int(input('Enter 2st Number?'))
 
     c = add(a, b)
-    print  # ...
+    print(f'Sum of {a} and {b} is {c}')
+
+main()
+
