@@ -10,8 +10,7 @@ def cs_to_lot(cs):
     j=[]
     ll=cs.split(';')
     for i in ll:
-       rr=i.split('=')
-       j.append(tuple(rr))
+       j.append(tuple(i.split('=')))
     return j
 
   
