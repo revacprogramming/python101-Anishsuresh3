@@ -16,5 +16,6 @@ for line in handle:
 
 t = tuple(d.items())
 result=sorted(t)
+
 for a,b in result:
     print(a,b)
