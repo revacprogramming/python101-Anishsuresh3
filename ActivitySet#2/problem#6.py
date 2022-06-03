@@ -12,6 +12,7 @@ m.add("idly", 10)
 m.add("vada", 20)
 m.add("dosa", 30)
 m.add("rice", 25)
+#to print
 m.show()
 
 
