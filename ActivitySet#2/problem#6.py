@@ -1,5 +1,6 @@
 class Menu:
-  my_menu=[]
+  def __init__(self):
+    self.my_menu=[]
   def add(self,name,price):
     self.my_menu.append((name,price))
   def show(self):
@@ -14,6 +15,8 @@ m.add("dosa", 30)
 m.add("rice", 25)
 #to print
 m.show()
+m1 = Menu()
+m1.show()
 
 
 

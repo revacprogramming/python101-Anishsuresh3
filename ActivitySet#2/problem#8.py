@@ -1,5 +1,4 @@
 class Menu(dict):
-
   def __setitem__(self,key='',value=0):
     self.__dict__[key]=value
   def __str__(self):
