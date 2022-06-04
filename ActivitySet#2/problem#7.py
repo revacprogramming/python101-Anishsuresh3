@@ -1,9 +1,9 @@
 class Menu:
-  my_menu=[]
-  def __init__(self,name='',price=0):
-    self.my_menu.append((name,price))
+  def __init__(self):
+    self.my_menu=[]
   def __add__(self,a):
-    return Menu(a[0],a[1])
+    self.my_menu.append((a[0],a[1]))
+    return self.my_menu
   def __str__(self):
     st=''
     sd=self.my_menu[1:]
@@ -13,6 +13,6 @@ class Menu:
 
 m = Menu()
 m = m + ("idly", 10) + ("vada", 20) + ('dosa',50)
-
 # Hint: operator overloading special methods (__add__, __sub__, etc.)
 print(m)  # should print the menu properly
+

@@ -1,9 +1,5 @@
-
-
 def get_cs():
-    st=input()
-    return st
-
+    return input()
 
 def cs_to_dict(cs):
     d={}
@@ -12,14 +8,9 @@ def cs_to_dict(cs):
       d[s[0]]=s[1]
     return d
 
-
 def dict_to_cs(d):
-    st=''
-    for a,b in d.items():
-      st+=a+'='+b+';'
-    return st[:-1]
-
-
+  return (";".join([str(i+"="+d[i]) for i in d]))
+  
 def main():
     cs = get_cs()
 
