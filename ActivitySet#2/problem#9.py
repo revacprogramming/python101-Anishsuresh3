@@ -5,6 +5,7 @@ class Menu(dict):
   def __str__(self):
     return ('\n'.join([str(a+' '+str(b)) for a,b in self.__dict__.items()]))
     
+
 class Order(dict,Menu):
     """fill in class definition here"""
   def __dict__(self,key1='',value1=0):
