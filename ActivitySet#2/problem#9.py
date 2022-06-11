@@ -10,11 +10,6 @@ class Order(dict,Menu):
   def __dict__(self,key1='',value1=0):
     self.__dict__[key1]=value1
     
-  
-  
-  
-
-
 class Bill:
     """fill in class definition here"""
 
