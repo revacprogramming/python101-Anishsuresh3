@@ -4,6 +4,7 @@ def rarea(f):
   c=f[4]*(f[1]-f[3])
   return(abs(a+b+c))
 
+
 def outpp(ch,resl):
     j=0
     for i in ch:
