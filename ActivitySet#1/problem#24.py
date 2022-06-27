@@ -1,4 +1,4 @@
-#sets
+# make this code work
 def input_set():
   s1=(input('Enter Set? ')).split(' ')
   return s1
@@ -7,24 +7,22 @@ def get_operation():
   return choice
 def get_operands():
   choice=(input('Enter the operands (set1/set2/set3):')).split(' ')
-  l1=[]
-  l1.append(set1)
-  l1.append(set2) 
-  l1.append(set3)
-  if 'set1' in choice and 'set2' in choice and 'set3' in choice:
-    return l1
-  elif 'set1'in choice and 'set2' in choice:
-    x=l1.pop(2)
-  elif 'set2'in choice and 'set3' in choice:
-    x=l1.pop(0)
-  elif 'set1'in choice and 'set3' in choice:
-    x=l1.pop(1)
+  l1 = list()
+  for operand in choice: 
+        if operand == 'set1':
+            l1.append(set1)
+        elif operand == 'set2':
+            l1.append(set2)
+        elif operand == 'set3':
+            l1.append(set3)
+ 
   return l1
 def unionn(s1,s2):
   s3 = s1
   for ele in s2:
       if ele not in s3:
         s3.append(ele)
+  s3.sort()
   return s3
 def interr(s1,s2):
   s3 = []
