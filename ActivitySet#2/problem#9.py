@@ -7,12 +7,8 @@ class Menu(dict):
         self.__dict__[key]=value
   def __str__(self):
     return ('\n'.join([str(a+' '+str(b)) for a,b in self.__dict__.items()]))
- 
-  
-  
     
 class Order(Menu):
-  """fill in class definition here"""
   def __setitem__(self,key1='',value1=0):
     if self.__dict__[key1] in Menu.__dict__:
         self.__dict__[key1]=value1
