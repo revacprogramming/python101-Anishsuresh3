@@ -9,10 +9,7 @@ for line in handle:
     if not line.startswith('From'):continue
     st=line.split()
     word=st[1]
-    if word not in d:
-        d[word]=1
-    else:
-        d[word]+=1
+    d[word]=d.get(word,0)+1
     
 l=0
 s=''
