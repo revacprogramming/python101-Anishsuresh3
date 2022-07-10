@@ -1,20 +1,27 @@
 # Network Programming
 # https://www.py4e.com/lessons/network
-import socket
+import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
-from urllib.request import urlopen
-url=input('enter the url- ')
-counts=int(input('enter count: '))
-position=int(input('enter position: '))
-for i in range(counts):
-    count=0
-    html=urlopen(url).read()
-    soup=BeautifulSoup(html,'html.parser')
-    # print(count)
+import ssl
+
+# Ignore SSL certificate errors
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+
+url = input('Enter URL - ')
+c = int(input('Enter count:'))
+p = int(input('Enter position:'))
+
+for i in range(c):
+    html = urllib.request.urlopen(url, context=ctx).read()
+    soup = BeautifulSoup(html, 'html.parser')
+    gh=1
+    # Retrieve all of the anchor tags
     tags = soup('a')
     for tag in tags:
-        if count<position:
-            # print(tag.get('href'))
-            count+=1
-            url=tag.get('href')
+        if(gh==p):
+           url=tag.get('href', None)
+        gh+=1
     print('Retrieving:',url)
+      
