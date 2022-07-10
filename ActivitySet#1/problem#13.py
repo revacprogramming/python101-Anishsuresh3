@@ -1,6 +1,5 @@
 # Network Programming
 # https://www.py4e.com/lessons/network
-
 import socket
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
