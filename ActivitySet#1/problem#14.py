@@ -1,14 +1,25 @@
 # Using Web Services
 # https://www.py4e.com/lessons/servces
-import urllib.request
-import xml.etree.ElementTree as et
-fh=urllib.request.urlopen('http://py4e-data.dr-chuck.net/comments_1550210.xml')
-data=fh.read()
-tree=et.fromstring(data)
-lst=tree.findall('comments/comment') 
-sum=0
-for items in lst:
-    num=int(items.find('.//count').text)
-    sum+=num
+import urllib.request, urllib.parse, urllib.error
+import xml.etree.ElementTree as ET
 
-print(sum)
+url = input ('Enter url: ')
+print('Retrieving', url)
+
+total = 0
+count = 0
+
+uh = urllib.request.urlopen(url)
+data = uh.read()
+print('Retrieved', len(data), 'characters')
+
+tree = ET.fromstring(data)
+lst = tree.findall ('comments/comment')
+
+for item in lst:
+    count = count + 1
+    t = item.find ('count').text
+    total = total + float (t)
+    
+print ('Count:', count)
+print ('Sum:' , total)
