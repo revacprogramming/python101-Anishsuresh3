@@ -9,6 +9,3 @@ for i in range(n):
       ss=st[j:k]
       if ss==ss[::-1]:
           print(ss,j+1)
-
-
-    
