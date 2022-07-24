@@ -58,8 +58,3 @@ def main():
       print(f"Non-Viable\nrows:{d['rows:']}\ncolumns:{d['columns:']}\nsub-matrix:{d['sub-matrix:']}")
 
 main()
-
-
-
-
-
